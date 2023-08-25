@@ -14,7 +14,7 @@ export default function WeatherInfo(props) {
           </span>
           <span className="unit">°C</span>
           {"   "}
-          <h1 className="display-1"> {props.data.city}</h1>  
+          <h1 className="display-1 p-5"> {props.data.city}</h1>  
       </div>
 
       <div className="more-info">
