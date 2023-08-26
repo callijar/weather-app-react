@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { ColorRing } from "react-loader-spinner";
+import { Triangle } from "react-loader-spinner";
 import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 import "./Weather.css";
@@ -65,14 +65,14 @@ export default function Weather(props) {
     search();
     return (
       <div className="Weather">
-        <ColorRing
-          visible={true}
+        <Triangle
           height="80"
           width="80"
-          ariaLabel="blocks-loading"
+          color="#8AAAE5"
+          ariaLabel="triangle-loading"
           wrapperStyle={{}}
-          wrapperClass="blocks-wrapper"
-          colors={["#b8c480", "#B2A3B5", "#F4442E", "#51E5FF", "#429EA6"]}
+          wrapperClassName=""
+          visible={true}
         />
       </div>
     );
