@@ -3,12 +3,28 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { Triangle } from "react-loader-spinner";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+
+  const [showForecastComponent, setShowForecastComponent] = useState(false);
+  const handleMoreClick = () => {
+    setShowForecastComponent(true);
+  };
+  const ComponentToShow = () => {
+    return (
+      <div>
+        <WeatherForecast
+          coordinates={weatherData.coordinates}
+          city={weatherData.city}
+        />
+      </div>
+    );
+  };
 
   function handleResponse(response) {
     setWeatherData({
@@ -59,6 +75,17 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
+        <div>
+          {!showForecastComponent && (
+            <button
+              onClick={handleMoreClick}
+              className="btn border rounded-pill"
+            >
+              Forecast
+            </button>
+          )}
+          {showForecastComponent && <ComponentToShow />}
+        </div>
       </div>
     );
   } else {
