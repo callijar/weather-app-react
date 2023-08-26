@@ -2,12 +2,35 @@
   margin: 20px;
 }
 
+.WeatherInfo .main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+}
+
+.WeatherInfo .main .blob {
+  grid-area: 1 / 1;
+  justify-self: start;
+}
+
+.WeatherInfo .main .city-name {
+  grid-area: 1 / 1;
+  justify-self: center;
+}
+
 .WeatherInfo .temperature-container {
   margin-top: 30px;
   align-items: center;
 }
 
-.WeatherInfo .more-info {
-  padding: 1em;
-  text-align: center;
+.WeatherInfo ul {
+  margin: 0;
+  padding: 0;
+}
+
+.WeatherInfo li {
+  display: inline;
+  margin-bottom: 5px;
+  list-style: none;
 }
