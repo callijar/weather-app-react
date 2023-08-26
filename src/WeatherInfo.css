@@ -30,6 +30,7 @@
 }
 
 .WeatherInfo li {
+  font-size: larger;
   display: inline;
   margin-bottom: 5px;
   list-style: none;
