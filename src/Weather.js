@@ -61,14 +61,14 @@ export default function Weather(props) {
       <div className="Weather rounded">
         <form onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-9 input-group mb-3 border rounded-pill search-bar">
+            <div className="col-9 input-group mb-3">
               <input
                 type="search"
                 placeholder="Enter a city.."
-                className="form-control search-input"
+                className="form-control search-input rounded-pill rounded-end-0 border-end-0 border-button"
                 onChange={handleCityChange}
               />
-              <button class="btn search-button" type="submit">
+              <button class="btn search-button rounded-pill rounded-start-0 border-start-0 border-button" type="submit">
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               </button>
             </div>
@@ -79,7 +79,7 @@ export default function Weather(props) {
           {!showForecastComponent && (
             <button
               onClick={handleMoreClick}
-              className="btn border rounded-pill"
+              className="btn rounded-pill border-button"
             >
               Forecast
             </button>

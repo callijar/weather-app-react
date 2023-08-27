@@ -6,13 +6,16 @@
   align-items: center;
 }
 
-.Weather .search-bar {
+.Weather .border-button {
+  border-color: #D0E2FF;
+}
+
+.Weather button:hover {
   border-color: #D0E2FF;
 }
 
 .Weather .search-input {
   background-color: transparent;
-  border: none;
 }
 
 .Weather .search-button {
